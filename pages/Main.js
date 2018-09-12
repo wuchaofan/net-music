@@ -1,9 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 // import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import { createBottomTabNavigator } from 'react-navigation';
+import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import FindPage from './Find'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { observer } from 'mobx-react'
+import store from './store'
 
 class HomeScreen extends React.Component {
   render() {
@@ -25,7 +27,7 @@ class SettingsScreen extends React.Component {
   }
 }
 
-export default createBottomTabNavigator({
+const TabScreen = createBottomTabNavigator({
   Home: {
     screen: FindPage,
     navigationOptions: {
@@ -67,3 +69,5 @@ export default createBottomTabNavigator({
     inactiveTintColor: '#666'
   }
 });
+
+export default TabScreen

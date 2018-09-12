@@ -12,6 +12,7 @@ import {Flex, SearchBar, Accordion, List, Tabs} from 'antd-mobile-rn'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import TabsCom from '../components/Tabs'
 import Swiper from '../components/Swiper'
+import {observer, inject} from 'mobx-react';
 
 const {width, height} = Dimensions.get('window')
 
@@ -40,24 +41,14 @@ class SearchInput extends Component {
     )
   }
 }
-
-export default class FindPage extends Component {
+@inject("rootStore")
+@observer
+class FindPage extends Component {
   static navigationOptions = {
     header: null
   }
   render () {
-    const tabs = [
-      { title: 'First Tab' },
-      { title: 'Second Tab' },
-      { title: 'Third Tab' },
-    ];
-    const style = {
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: 150,
-      backgroundColor: '#fff',
-      flex: 1
-    }
+    console.log(this.props)
     return (
       <ScrollView style={{ flex: 1 }}>
         <Header/>
@@ -66,6 +57,8 @@ export default class FindPage extends Component {
     )
   }
 }
+
+export default FindPage
 
 const styles = StyleSheet.create({
   header: {
