@@ -60,11 +60,8 @@ export default class FindPage extends Component {
     }
     return (
       <ScrollView style={{ flex: 1 }}>
-        <View style={{ flex: 1, backgroundColor: 'white' }}>
-          <Header/>
-          <TabsCom>
-          </TabsCom>
-        </View>
+        <Header/>
+        <TabsCom />
       </ScrollView>
     )
   }

@@ -88,7 +88,7 @@ export default class Tabs extends Component {
         <View style={underlineStyle}></View>
       </View>
       <ScrollView pagingEnabled={true} horizontal={true} onScroll={this._onScroll} scrollEventThrottle={10}>
-        <View style={{flex: 1, width: containerWidth, height: 800}}>
+        <View style={{flex: 1, width: containerWidth}}>
           <View style={{backgroundColor: '#D84035', height: 80}}></View>
           <View style={{alignItems: 'center', position: 'absolute', marginTop: 6, width: '100%'}}>
             <Swiper style={{width: containerWidth * 0.86, flex: 1}}/>
@@ -111,7 +111,7 @@ export default class Tabs extends Component {
             <Text style={{fontWeight: 'bold', fontSize: 18, marginRight: 4}}>最新音乐</Text>
             <Icon name="chevron-right" size={15} color="#888" />
           </View>
-          <View style={{flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', alignContent: 'stretch'}}>
+          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', alignContent: 'stretch'}}>
             <Card source={require('../img/c1.jpg')} title="你们是我教过最差的一届学生"/>
             <Card source={require('../img/c2.jpg')} title="减压室|室长说你是这条街最有舞"/>
             <Card source={require('../img/c3.jpg')} title="【妖气弥漫】"/>
@@ -119,9 +119,6 @@ export default class Tabs extends Component {
             <Card source={require('../img/c2.jpg')} title="为了让客人就哦而金额"/>
             <Card source={require('../img/c1.jpg')} title="水电费舒服无非"/>
           </View>
-        </View>
-        <View style={{flex: 1, width: containerWidth, height: 800}}>
-          <Text>sdsd1</Text>
         </View>
       </ScrollView>
     </View>)
